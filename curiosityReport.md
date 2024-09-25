@@ -9,7 +9,7 @@ Toil means manual, repetitive tasks. The top three kinds of toil as report by Go
 2. On-call (urgent) responses
 3. Releases and pushes
 
-An article on Google's SRE website recounts a case of solving excessive toil in Bigtable, a data system. There were so many incidents and customer requests, that they began to occupy the majority of the team's time, dominating their time for projects and other progressive work. The SRE team had a meeting and decided that they needed a permanent solution, by prioritizing less customer requests and focusing more on automation, creating basic tools first which helped paved the way for advanced automation.
+An article on Google's SRE website recounts a case of solving excessive toil in Bigtable, a data system. There were so many incidents and customer requests, that they began to occupy the majority of the team's time, dominating their time for projects and other progressive work. The SRE team had a meeting and decided that they needed a permanent solution, by prioritizing less customer requests and focusing more on automation, creating basic tools first which helped paved the way for advanced automation. This ended up snowballing, with each toil reduction creating more time to reduce even more toil. There was so much improvement that customer requests decreased from 2200 to 400 per quarter.
 
 ## Implementation types
 
