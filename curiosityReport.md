@@ -13,9 +13,10 @@ An article on Google's SRE website recounts a case of solving excessive toil in 
 
 ## Implementation types
 
-### Kitchen Sink
+- **Kitchen Sink:** Often the first implementation of a SRE team, this is a team with more undefined boundaries and performs odd jobs to generally improve the reliability of a service.
+- **Embedded:** Instead of a separate team, a few SR engineers are directly integrated into the developing team. This is useful to improve collaboration and communication.
 
-Often the first implementation of a SRE team, 
+https://cloud.google.com/blog/products/devops-sre/how-sre-teams-are-organized-and-how-to-get-started
 
 ## Why Heroism is Bad
 Google had a very interesting article about the problems of "heroism" in SRE. It was described a hero as someone who would devote themselves at all costs to reach a certain objective. This can be a problem if they are putting in more toil to fix something that is actually the result of a broken system. Some examples include having a faster launch process, or certain SLO's for performance or service. If a "hero" continues to put in way too much toil, no one will know that the system is broken, nor that the set SLO's are unreasonable. This will soon lead to burnout as well. Google's article encourage ending "heroism" and letting the service break, so that everyone would be on board with fixing the flaw in the system and improving automation.
