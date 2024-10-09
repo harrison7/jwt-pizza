@@ -23,7 +23,7 @@ Google's SRE website had several different recommendations for how to implement 
 
 ## Capacity Management
 
-
+It is very important to make sure a service can reliably stay online without issue. One specific principle is redundancy: A level of N+0 means the system functions, but an outage will cause it to go down. N+1 means it can function with a single region going down, and N+2 means it can function when two regions go down. An ideal goal is to function at N+2, so that maintenance can be done in one region and an unplanned outage can happen at the same time, but the service will remain online. However, it is more cost efficient to have more replicas if you are on N+2; it is a large investment to make.
 
 ## Why Heroism is Bad
 
