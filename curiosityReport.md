@@ -27,10 +27,25 @@ Google had a very interesting article about the problems of "heroism" in SRE. It
 
 I was pretty surprised by this viewpoint, since one of my personal philosophies is that an individual effort can be stronger than letting the system handle everything. However this mindset makes a lot of sense in the context of software development, especially since it is a field with so much potential for automation. 
 
-## Capacity Management
+## Reducing Toil through Proper Alerting
 
-It is very important to make sure a service can reliably stay online without issue. One specific principle is redundancy: A level of N+0 means the system functions, but an outage will cause it to go down. N+1 means it can function with a single region going down, and N+2 means it can function when two regions go down. An ideal goal is to function at N+2, so that maintenance can be done in one region and an unplanned outage can happen at the same time, but the service will remain online. However, it is more cost efficient to have more replicas if you are on N+2; it is a large investment to make.
+A system can't do everything on its own, an alert is a sign that human involvement is required. To minimize toil, high-quality alerts need to be implemented, alerting only when necessary and there is a significant requirement of human oversight that a machine cannot do.
+
+Good alerts have the following traits:
+- They are sent on time
+- They are delivered to the correct employee to fix it
+- The alert is clear and well documented
+- The alert does more beyond alerting a human; it uses automation to fix anything it can
+
+The O'Reilly website classified the following kinds of alerts in a hierarchy:
+- Investigative: the system's health may be in question
+- Proactive: the system will likely be in danger
+- Reactive: the system is currently in danger. Most of the alerts should be of this type, so that important alerts will not be overlooked/procrastinated
 
 ## Multi-single-tenant architectures in cloud
 
 A collaboratory article hosted on O'Reilly used an analogy where birds would represent an instance of a system. They used it to explain how to best set up a cloud-based service. In one joking example, they presented a funny-looking bird that would cater to the exact needs of a single user, but there could only be a single bird. This represented a single-tenant system. Another example was a multitenant system, where there is a flock of birds to handle user requests, and if one instance goes down, you can easily kill it off and replace it with an identical bird. The third and final example is a multi-single-tenant system, which has the greatest potential but is the most difficult to implement. It is like having a zoo of unique and exotic birds, having many that can cater to the exact needs of a user. Each type of tenant will need unique care to make it work, and you can't kill them like in a regular multitenant system since each type of tenant is vital. However, it is possible to automate the management of the tenants, through methods such as grouping them together into classes, and creating multitenants that manage a group of single tenant instances (like a mother bird caring for her nest). While this method requires the most initial investment, it will pay off by having the fewest outages and most automation by the end.
+
+## Capacity Management
+
+It is very important to make sure a service can reliably stay online without issue. One specific principle is redundancy: A level of N+0 means the system functions, but an outage will cause it to go down. N+1 means it can function with a single region going down, and N+2 means it can function when two regions go down. An ideal goal is to function at N+2, so that maintenance can be done in one region and an unplanned outage can happen at the same time, but the service will remain online. However, it is more cost efficient to have more replicas if you are on N+2; it is a large investment to make.
