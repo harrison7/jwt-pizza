@@ -13,11 +13,20 @@ An article on Google's SRE website recounts a case of solving excessive toil in 
 
 ## Implementation types
 
-- **Kitchen Sink:** Often the first implementation of a SRE team, this is a team with more undefined boundaries and performs odd jobs to generally improve the reliability of a service.
-- **Embedded:** Instead of a separate team, a few SR engineers are directly integrated into the developing team. This is useful to improve collaboration and communication.
+Google's SRE website had several different recommendations for how to implement a SRE team in a company:
 
-https://cloud.google.com/blog/products/devops-sre/how-sre-teams-are-organized-and-how-to-get-started
+- **Kitchen Sink:** Often the first implementation of a SRE team, this is a team with more undefined boundaries and performs odd jobs to generally improve the reliability of a service.
+- **Infrastructure and Tools:** A SRE team focused on improving internal features for the other developers in a service
+- **Product/application:** A team specifically focused on one app, best if there are a limited amount in the company to prevent duplication/redundancy
+- **Embedded:** Instead of a separate team, a few SR engineers are directly integrated into the developing team. This is useful to improve collaboration and communication.
+- **Consulting:** More hands-off, the team suggests solutions and can code ideas, but they do not have the final say.
+
+## Capacity Management
+
+
 
 ## Why Heroism is Bad
+
 Google had a very interesting article about the problems of "heroism" in SRE. It was described a hero as someone who would devote themselves at all costs to reach a certain objective. This can be a problem if they are putting in more toil to fix something that is actually the result of a broken system. Some examples include having a faster launch process, or certain SLO's for performance or service. If a "hero" continues to put in way too much toil, no one will know that the system is broken, nor that the set SLO's are unreasonable. This will soon lead to burnout as well. Google's article encourage ending "heroism" and letting the service break, so that everyone would be on board with fixing the flaw in the system and improving automation.
 
+I was pretty surprised by this viewpoint, since one of my personal philosophies is that an individual effort can be stronger than letting the system handle everything. However this mindset makes a lot of sense in the context of software development, especially since it is a field with so much potential for automation. 
