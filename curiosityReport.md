@@ -4,7 +4,7 @@ Site Reliability Engineering is a philosophy originating from Google, similar to
 
 ## Toil
 
-Toil means manual, repetitive tasks. The top three kinds of toil as report by Google SRE's are:
+Toil means manual, repetitive tasks. The top three kinds of toil as reported by Google SRE's are:
 1. Interrupts (non-urgent service-related messages and emails)
 2. On-call (urgent) responses
 3. Releases and pushes
@@ -25,7 +25,7 @@ Google's SRE website had several different recommendations for how to implement 
 
 Google had a very interesting article about the problems of "heroism" in SRE. It described a hero as someone who would devote themselves at all costs to reach a certain objective. This can be a problem if they are putting in more toil to fix something that is actually the result of a flawed system that needs automation. Some examples include having a faster launch process, or certain SLO's for performance or service. If a "hero" continues to put in way too much toil, no one will know that the system is broken, nor that the set SLO's are unreasonable. This will soon lead to burnout as well. Google's article encourages ending "heroism" and letting the service break, so that everyone would be on board with fixing the flaw in the system and improving automation.
 
-I was pretty surprised by this viewpoint, since one of my personal philosophies is that an individual effort can be stronger than letting the system handle everything. However this mindset makes a lot of sense in the context of software development, especially since it is a field with so much potential for automation. 
+I was pretty surprised by this viewpoint, since one of my personal philosophies is that an individual effort can be stronger than letting the system handle everything. However, this mindset makes a lot of sense in the context of software development, especially since it is a field with so much potential for automation. 
 
 ## Reducing Toil through Proper Alerting
 
